@@ -4,7 +4,17 @@ $(function() {
   var images, lastImage, nextImage;
   var currentImage = 0;
 
-  images = [
+  window.images = new Array();
+
+  function preload() {
+    var i = 0;
+    for (i = 0; i < preload.arguments.length; i++) {
+      window.images[i] = new Image();
+      window.images[i].src = preload.arguments[i];
+    }
+  }
+
+  preload(
     "/assets/cequel.jpg", 
     "/assets/cequel3.jpg", 
     "/assets/cequel7.jpg", 
@@ -18,7 +28,20 @@ $(function() {
     "/assets/station4.jpg", 
     "/assets/physical.JPG", 
     "/assets/ka.jpg"
-  ];
+  )
+  
+  //Set a drop shadow
+  function setShadow(percent) {
+      var min = 20, max = 100;
+        var val = (max - min) * percent + min;
+          $('#content').css('box-shadow', 'inset 0 -'+val+'px '+val+'px rgba(0,0,0,'+((percent * .8)+.2)+')');
+  }
+
+  $(document).scroll(function() {
+      var max = window.innerHeight, y = window.scrollY;
+
+        setShadow( y / max );
+  });
 
   lastImage = function() {
     currentImage--;
@@ -28,6 +51,7 @@ $(function() {
     return currentImage;
   };
 
+  //Scroll through the images 
   nextImage = function() {
     currentImage++;
     if (currentImage === 13) {
@@ -38,14 +62,15 @@ $(function() {
 
   $("#left").click(function(e) {
     e.preventDefault();
-    $("#content").css("background-image", "url(" + images[lastImage()] + ")");
+    $("#content").css("background-image", "url(" + window.images[lastImage()].src + ")");
   });
 
   $("#right").click(function(e) {
     e.preventDefault();
-    $("#content").css("background-image", "url(" + images[nextImage()] + ")");
+    $("#content").css("background-image", "url(" + window.images[nextImage()].src + ")");
   });
 
+  //Allow arrow keys to scroll left and right
   $(document).keydown(function(e) {
     if (e.keyCode === 39) {
       $("#right").click();
