@@ -1,0 +1,63 @@
+
+$(function() {
+
+  var images, lastImage, nextImage;
+  var currentImage = 0;
+
+  images = [
+    "<%= asset_path("cequel.jpg") %>", 
+    "<%= asset_path("cequel3.jpg") %>", 
+    "<%= asset_path("cequel7.jpg") %>", 
+    "<%= asset_path("ameren2.jpg") %>", 
+    "<%= asset_path("ameren.jpg") %>", 
+    "<%= asset_path("residential5.jpg") %>", 
+    "<%= asset_path("residential.jpg") %>", 
+    "<%= asset_path("cozzens3.jpg") %>", 
+    "<%= asset_path("residential6.jpg") %>", 
+    "<%= asset_path("sketch4.JPG") %>", 
+    "<%= asset_path("station4.jpg") %>", 
+    "<%= asset_path("physical.JPG") %>", 
+    "<%= asset_path("ka.jpg") %>"
+  ];
+
+  lastImage = function() {
+    currentImage--;
+    if (currentImage === -1) {
+      currentImage = 12;
+    }
+    return currentImage;
+  };
+
+  nextImage = function() {
+    currentImage++;
+    if (currentImage === 13) {
+      currentImage = 0;
+    }
+    return currentImage;
+  };
+
+  $("#left").click(function(e) {
+    e.preventDefault();
+    $("#content").css("background-image", "url(" + images[lastImage()] + ")");
+  });
+
+  $("#right").click(function(e) {
+    e.preventDefault();
+    $("#content").css("background-image", "url(" + images[nextImage()] + ")");
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode === 39) {
+      $("#right").click();
+      return false;
+    }
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode === 37) {
+      $("#left").click();
+      return false;
+    }
+  });
+
+});
