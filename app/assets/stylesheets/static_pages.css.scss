@@ -8,6 +8,7 @@ body{
   margin:0;
   padding:0;
   height:100%;
+  color:black;
 }
 
 html, body{
@@ -27,9 +28,9 @@ html, body{
 }
 
 #content {
-  color: white;
   width: 100%;
   height: 100%;
+  color:black;
   //background: image-url("cequel.jpg") no-repeat center center fixed; 
 }
 
@@ -96,4 +97,10 @@ html, body{
   color:white;
   background-color: #101010;
   min-height: 100px;
+}
+
+.shadow{
+  position: absolute;
+  width: 100%;
+  height:100%;
 }

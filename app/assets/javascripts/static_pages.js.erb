@@ -8,7 +8,7 @@ $(function() {
     var div = $("<div style=\"background-image: url('"+url+"');\"/>");
     div.addClass('background');
 
-    $('.content-backgrounds').append(div);
+    $('.content-backgrounds').prepend(div);
   }
 
   var images = [
@@ -27,8 +27,8 @@ $(function() {
     "/assets/ka.jpg"
   ];
 
-  for( var i = 0; i < images.length; i++){
-    createHomeImage(images[i]);
+  for( var i = images.length; i > 0; i--){
+    createHomeImage(images[i-1]);
   }
 
   $( $('.background')[0]).addClass('active');
@@ -37,7 +37,7 @@ $(function() {
   function setShadow(percent) {
     var min = 20, max = 250;
     var val = (max - min) * percent + min;
-    $('.background').css('box-shadow', 'inset 0 -'+val+'px '+val+'px rgba(0,0,0,'+((percent * .8)+.2)+')');
+    $('.shadow').css('box-shadow', 'inset 0 -'+val+'px '+val+'px rgba(0,0,0,'+((percent * .8)+.2)+')');
   }
 
   $(document).scroll(function() {
