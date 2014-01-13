@@ -2,19 +2,16 @@
 $(function() {
 
   var images, lastImage, nextImage;
-  var currentImage = 0;
+  var currentImageIndex = 0;
 
-  window.images = new Array();
+  function createHomeImage(url){
+    var div = $("<div style=\"background-image: url('"+url+"');\"/>");
+    div.addClass('background');
 
-  function preload() {
-    var i = 0;
-    for (i = 0; i < preload.arguments.length; i++) {
-      window.images[i] = new Image();
-      window.images[i].src = preload.arguments[i];
-    }
+    $('.content-backgrounds').append(div);
   }
 
-  preload(
+  var images = [
     "/assets/cequel.jpg", 
     "/assets/cequel3.jpg", 
     "/assets/cequel7.jpg", 
@@ -28,13 +25,19 @@ $(function() {
     "/assets/station4.jpg", 
     "/assets/physical.JPG", 
     "/assets/ka.jpg"
-  )
+  ];
+
+  for( var i = 0; i < images.length; i++){
+    createHomeImage(images[i]);
+  }
+
+  $( $('.background')[0]).addClass('active');
   
   //Set a drop shadow
   function setShadow(percent) {
-      var min = 20, max = 100;
-        var val = (max - min) * percent + min;
-          $('#content').css('box-shadow', 'inset 0 -'+val+'px '+val+'px rgba(0,0,0,'+((percent * .8)+.2)+')');
+    var min = 20, max = 250;
+    var val = (max - min) * percent + min;
+    $('.background').css('box-shadow', 'inset 0 -'+val+'px '+val+'px rgba(0,0,0,'+((percent * .8)+.2)+')');
   }
 
   $(document).scroll(function() {
@@ -43,31 +46,41 @@ $(function() {
         setShadow( y / max );
   });
 
-  lastImage = function() {
-    currentImage--;
-    if (currentImage === -1) {
-      currentImage = 12;
+  lastImageIndex = function() {
+    currentImageIndex--;
+    if (currentImageIndex === -1) {
+      currentImageIndex = 12;
     }
-    return currentImage;
+    return currentImageIndex;
   };
 
   //Scroll through the images 
-  nextImage = function() {
-    currentImage++;
-    if (currentImage === 13) {
-      currentImage = 0;
+  nextImageIndex = function() {
+    currentImageIndex++;
+    if (currentImageIndex === 13) {
+      currentImageIndex = 0;
     }
-    return currentImage;
+    return currentImageIndex;
   };
+
+  function move(inc){
+    var index = $('.background.active').index() + inc;
+    if( index >= images.length ) index = 0;
+    if( index < 0 ) index = images.length - 1;
+
+    $('.background').removeClass('active');
+    $( $('.background')[index] ).addClass('active');
+  }
 
   $("#left").click(function(e) {
     e.preventDefault();
-    $("#content").css("background-image", "url(" + window.images[lastImage()].src + ")");
+    move(1);
+
   });
 
   $("#right").click(function(e) {
     e.preventDefault();
-    $("#content").css("background-image", "url(" + window.images[nextImage()].src + ")");
+    move(-1);
   });
 
   //Allow arrow keys to scroll left and right
