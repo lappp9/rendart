@@ -4,7 +4,7 @@ $(function() {
   var images, lastImage, nextImage;
   var currentImage = 0;
 
-  images = ["cequel.jpg", "cequel13.jpg", "cequel7.jpg", "ameren2.jpg", "ameren.jpg", "residential5.jpg", "residential.jpg", "cozzens3.jpg", "residential6.jpg", "sketch4.jpg", "station4.jpg", "physical.jpg", "ka.jpg"];
+  images = ["cequel.jpg", "cequel3.jpg", "cequel7.jpg", "ameren2.jpg", "ameren.jpg", "residential5.jpg", "residential.jpg", "cozzens3.jpg", "residential6.jpg", "sketch4.JPG", "station4.jpg", "physical.JPG", "ka.jpg"];
 
   lastImage = function() {
     currentImage--;

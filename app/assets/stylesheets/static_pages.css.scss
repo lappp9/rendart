@@ -37,12 +37,10 @@ html, body{
   min-height: 50px;
 }
 
-#nav{
-
-}
-
 .link{
   color:white;
+  font-size:20px;
+  padding-right:10px;
 }
 
 .arrow {
@@ -60,4 +58,15 @@ html, body{
   position:absolute;
   left:0;
   top:0;
+}
+
+#nav {
+  padding-top: 55px;
+  padding-left: 400px;
+}
+
+#footer{
+  color:white;
+  background-color: #101010;
+  min-height: 100px;
 }

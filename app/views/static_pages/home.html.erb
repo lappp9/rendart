@@ -1,18 +1,51 @@
 <div id = "content">
-  <%= image_tag "logo.png", id: "logo" %>
-  <nav id = "nav">
-    <%= link_to "home", root_path, class: "link" %>
-    <%= link_to "projects", "#", class: "link" %>
-    <%= link_to "clients", "#", class: "link" %>
-    <%= link_to "contact", contact_path, class: "link" %>
-  </nav>
+
+  <div class = "row">
+    <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
+    
+
+    <nav id = "nav" class = "col-md-7">
+      <%= link_to "home", root_path, class: "link" %>
+      <%= link_to "projects", "#", class: "link" %>
+      <%= link_to "clients", "#", class: "link" %>
+      <%= link_to "contact", contact_path, class: "link" %>
+    </nav>
+
+  </div>
+
   <a href = "#" id = "left"> <%= image_tag "arrow.png", class: "arrow" %> </a>
   <a href = "#" id = "right"> <%= image_tag "arrowr.png", class: "arrow" %> </a>
 
 </div>
-<div id = "links">
-  <p>Other stuff!</p>
+
+<br />
+
+<div class = "row">
+  <div id = "info" class = "col-md-6 col-md-offset-1">
+    <blockquote>ABOUT</blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum urna libero, eget dictum augue vehicula non. Etiam id lectus quis nibh rhoncus aliquam quis eget nibh. Nullam euismod vestibulum mauris sed ornare. Nulla sagittis libero ac tempus eleifend. Nunc pretium ullamcorper massa mattis cursus. Nulla eget lacus sed risus congue vestibulum ut quis diam. Quisque id tempus velit. Aliquam non ante consectetur, aliquet ligula sed, adipiscing massa. Quisque rhoncus sagittis interdum. Aliquam tincidunt rhoncus justo non venenatis. Etiam ipsum dolor, porta ac odio vitae, scelerisque ultrices purus. Sed sagittis mi nec massa porta, sit amet semper erat rhoncus.
+    </p>
+    <blockquote>SERVICES</blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum urna libero, eget dictum augue vehicula non. Etiam id lectus quis nibh rhoncus aliquam quis eget nibh. Nullam euismod vestibulum mauris sed ornare. Nulla sagittis libero ac tempus eleifend. Nunc pretium ullamcorper massa mattis cursus. Nulla eget lacus sed risus congue vestibulum ut quis diam. Quisque id tempus velit. Aliquam non ante consectetur, aliquet ligula sed, adipiscing massa. Quisque rhoncus sagittis interdum. Aliquam tincidunt rhoncus justo non venenatis. Etiam ipsum dolor, porta ac odio vitae, scelerisque ultrices purus. Sed sagittis mi nec massa porta, sit amet semper erat rhoncus.
+    </p>
+  </div>
+
+  <div id = "email" class = "col-md-4">
+
+    <blockquote>TALK TO ME</blockquote>
+    <%= form_tag :emails %>
+      <%=  email_field(:email, :from, placeholder: "Your email address", class: "form-control") %> 
+      <br />
+      <%=  text_area(:email, :body, rows: 12, placeholder: "Your message", class: "form-control") %>
+      <br />
+      <%= submit_tag "Send it", class: "btn form-control btn-primary" %>
+  </div>
 </div>
 
+<br />
 
+<div id = "footer">
+</div>
 
