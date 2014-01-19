@@ -12,20 +12,21 @@ $(function() {
   }
 
   var images = [
-    "/assets/cequel.jpg", 
-    "/assets/cequel3.jpg", 
-    "/assets/cequel7.jpg", 
-    "/assets/ameren2.jpg", 
-    "/assets/ameren.jpg", 
-    "/assets/residential5.jpg", 
-    "/assets/residential.jpg", 
-    "/assets/cozzens3.jpg", 
-    "/assets/residential6.jpg", 
-    "/assets/sketch4.JPG", 
-    "/assets/station4.jpg", 
+    "/assets/cequel.jpg",
+    "/assets/ka.jpg",
     "/assets/physical.JPG", 
-    "/assets/ka.jpg"
+    "/assets/station4.jpg", 
+    "/assets/sketch4.JPG", 
+    "/assets/residential6.jpg", 
+    "/assets/cozzens3.jpg", 
+    "/assets/residential.jpg", 
+    "/assets/residential5.jpg", 
+    "/assets/ameren.jpg", 
+    "/assets/ameren2.jpg", 
+    "/assets/cequel7.jpg", 
+    "/assets/cequel3.jpg"
   ];
+
 
   for( var i = images.length; i > 0; i--){
     createHomeImage(images[i-1]);
@@ -75,7 +76,6 @@ $(function() {
   $("#left").click(function(e) {
     e.preventDefault();
     move(1);
-
   });
 
   $("#right").click(function(e) {

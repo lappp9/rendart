@@ -16,8 +16,26 @@ html, body{
 }
 
 #logo{
-  width:470px; /* you can use % */
+  width:500px; /* you can use % */
   height: auto;
+}
+
+.project-image{
+  width: 500px;
+  height: auto;
+}
+
+.headings{
+  padding-top:200px;
+  padding-left: 7%;
+}
+
+#small-logo{
+  width: 200px;
+  height: auto;
+  position:absolute;
+  right:0;
+  bottom:0;
 }
 
 #header{
@@ -33,7 +51,6 @@ html, body{
   color:black;
   //background: image-url("cequel.jpg") no-repeat center center fixed; 
 }
-
 .background{
   background: no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -65,27 +82,38 @@ html, body{
   min-height: 50px;
 }
 
+.project-link{
+  color:white;
+}
+
+.project-link:hover {
+  color:#646464;
+}
+
+
 .link{
   color:white;
   font-size:20px;
   padding-right:10px;
 }
 
-.arrow {
-  width: 50px;
-  height: 650px;
+.link:hover {
+  color:#646464;
+  text-decoration:none;
 }
 
-#right {
+.arrow{
+  top:50%;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  color:white;
+  font-size: 30px;
+  opacity: .50;
 }
-
-#left{
-  position:absolute;
+.arrow.left{
   left:0;
-  top:0;
+}
+.arrow.right{
+  right:0;
 }
 
 #nav {
@@ -105,4 +133,31 @@ html, body{
   width: 100%;
   height:100%;
 }
+
+.projects-page{
+  background-color: #262626;
+}
+
+.headings{
+  color:white;
+}
+
+.project-row{
+  margin-left: -.5%;
+}
+
+.project-image{
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
+  //background-size: 175px auto;
+  //background-size: contain;
+
+  //box sizing
+  height: 175px;
+  width: 175px;
+  margin: 10px 0px 10px 0px;
+}
+
 

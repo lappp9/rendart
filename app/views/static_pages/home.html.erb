@@ -9,15 +9,17 @@
 
     <nav id = "nav" class = "col-md-7">
       <%= link_to "home", root_path, class: "link" %>
-      <%= link_to "projects", "#", class: "link" %>
+      <%= link_to "projects", projects_path, class: "link" %>
       <%= link_to "clients", "#", class: "link" %>
       <%= link_to "contact", contact_path, class: "link" %>
     </nav>
 
   </div>
 
-  <a href = "#" id = "left"> <%= image_tag "arrow.png", class: "arrow" %> </a>
-  <a href = "#" id = "right"> <%= image_tag "arrowr.png", class: "arrow" %> </a>
+  <div id = "left" class = "arrow glyphicon glyphicon-chevron-left left" ></div>
+  <div id = "right" class = "arrow glyphicon glyphicon-chevron-right right" ></div>
+
+  <%= image_tag "small_logo.png", id: "small-logo", class: "col-md-4" %>
 
 </div>
 
@@ -25,19 +27,44 @@
 
 <div class = "row">
   <div id = "info" class = "col-md-6 col-md-offset-1">
-    <blockquote>ABOUT</blockquote>
+    <blockquote><strong>ABOUT</strong></blockquote>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum urna libero, eget dictum augue vehicula non. Etiam id lectus quis nibh rhoncus aliquam quis eget nibh. Nullam euismod vestibulum mauris sed ornare. Nulla sagittis libero ac tempus eleifend. Nunc pretium ullamcorper massa mattis cursus. Nulla eget lacus sed risus congue vestibulum ut quis diam. Quisque id tempus velit. Aliquam non ante consectetur, aliquet ligula sed, adipiscing massa. Quisque rhoncus sagittis interdum. Aliquam tincidunt rhoncus justo non venenatis. Etiam ipsum dolor, porta ac odio vitae, scelerisque ultrices purus. Sed sagittis mi nec massa porta, sit amet semper erat rhoncus.
+      RendArt is an up-and-coming rendering service specializing in architectural visualizations. We are confident that we can provide a rendered image with the desired style and effects that best portray your project or product. Thanks to beautiful realism, expressive styles, and a vision of showing off new concepts, your clients will love what they see and be excited about what's to come. When you're ready, send us a message.
     </p>
-    <blockquote>SERVICES</blockquote>
+    <blockquote><strong>SERVICES</strong></blockquote>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum urna libero, eget dictum augue vehicula non. Etiam id lectus quis nibh rhoncus aliquam quis eget nibh. Nullam euismod vestibulum mauris sed ornare. Nulla sagittis libero ac tempus eleifend. Nunc pretium ullamcorper massa mattis cursus. Nulla eget lacus sed risus congue vestibulum ut quis diam. Quisque id tempus velit. Aliquam non ante consectetur, aliquet ligula sed, adipiscing massa. Quisque rhoncus sagittis interdum. Aliquam tincidunt rhoncus justo non venenatis. Etiam ipsum dolor, porta ac odio vitae, scelerisque ultrices purus. Sed sagittis mi nec massa porta, sit amet semper erat rhoncus.
+      <dl>
+        <div class = "col-md-4">
+          <dt> Rendering </dt>
+          <dd> Realistic </dd>
+          <dd> 3D walk-through</dd>
+          <dd> Animated fly-through </dd>
+          <dd> Textured </dd>
+          <dd> Colored </dd>
+          <dd> Sketchy </dd>
+          <dd> Custom Styles </dd>
+          <dd> 3D Floor Plans </dd>
+          <dd> Massing Models </dd>
+        </div>
+        <div class = "col-md-4">
+          <dt> Photography </dt>
+          <dd> Finished Projects </dd>
+          <dd> Before/ After </dd>
+        </div>
+        <div class = "col-md-4">
+          <dt> Marketing </dt>
+          <dd> Logos </dd>
+          <dd> Branding </dd>
+          <dd> Product Design/ Models </dd>
+          <dd> Graphic Design </dd>
+        </div>
+      </dl>
     </p>
   </div>
 
   <div id = "email" class = "col-md-4">
 
-    <blockquote>TALK TO ME</blockquote>
+    <blockquote><strong>TALK TO ME</strong></blockquote>
     <%= form_tag :emails %>
       <%=  email_field(:email, :from, placeholder: "Your email address", class: "form-control") %> 
       <br />
