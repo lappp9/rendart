@@ -1,0 +1,62 @@
+<div id = "content" class = "projects-page">
+
+  <div class = "" id = "header">
+    <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
+
+    <nav id = "nav" class = "col-md-7">
+    <%= link_to "home", root_path, class: "link" %>
+    <%= link_to "projects", "/projects/exterior", class: "link" %>
+    <%= link_to "clients", "#", class: "link" %>
+    <%= link_to "contact", contact_path, class: "link" %>
+    </nav>
+
+  </div>
+
+  <div class = "headings">
+    <a href = "/projects/exterior" class = "project-link"><div class = "col-md-2"><blockquote><strong>exterior</strong></blockquote></div></a>
+    <a href = "/projects/office" class = "project-link"><div class = "col-md-2"><blockquote><strong>office</strong></blockquote></div></a>
+    <a href = "/projects/public_service" class = "project-link"><div class = "col-md-2"><blockquote><strong>public service</strong></blockquote></div></a>
+    <a href = "/projects/residential" class = "project-link"><div class = "col-md-2"><blockquote><strong>residential</strong></blockquote></div></a>
+    <a href = "/projects/physical_model" class = "project-link"><div class = "col-md-2"><blockquote><strong>physical model</strong></blockquote></div></a>
+    <a href = "/projects/sketch" class = "project-link"><div class = "col-md-2"><blockquote><strong>sketch</strong></blockquote></div></a>
+  </div>
+
+  <div class = "projects">
+
+    <div class = "row project-row">
+      <div class = "col-md-offset-1 col-md-2 project-image station4" data-toggle="modal" data-target="#station4_modal"></div>
+      <div class = "col-md-2 project-image cozzens3"></div>
+      <div class = "col-md-2 project-image residential5"></div>
+      <div class = "col-md-2 project-image residential3"></div>
+      <div class = "col-md-2 project-image residential"></div>
+      <div class = "col-md-2 project-image ka"></div>
+    </div>
+
+    <br />
+
+    <div class = "row project-row">
+      <div class = "col-md-offset-1 col-md-2 project-image ka2"></div>
+      <div class = "col-md-2 project-image station11"></div>
+      <div class = "col-md-2 project-image station2"></div>
+      <div class = "col-md-2 project-image station3"></div>
+      <div class = "col-md-2 project-image station12"></div>
+      <div class = "col-md-2 project-image wall"></div>
+    </div>
+
+    <br />
+
+  </div>
+
+  <div class="modal fade" id = "station4_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <img src = "/assets/station4" />
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

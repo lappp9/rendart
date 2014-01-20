@@ -2,9 +2,14 @@ RendArt::Application.routes.draw do
   root "static_pages#home"
 
   match "/contact", to: "static_pages#contact", via: "get"
-  match "/projects", to: "static_pages#projects", via: "get"
   match "/emails", to: "emails#new", via: "post"
 
+  match "/projects/exterior", to: "static_pages#exterior", via: "get"
+  match "/projects/office", to: "static_pages#office", via: "get"
+  match "/projects/public_service", to: "static_pages#public_service", via: "get"
+  match "/projects/residential", to: "static_pages#residential", via: "get"
+  match "/projects/physical_model", to: "static_pages#physical_model", via: "get"
+  match "/projects/sketch", to: "static_pages#sketch", via: "get"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

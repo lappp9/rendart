@@ -1,1 +1,42 @@
-<h1> Contact Info!</h1>
+<div id = "content" class = "projects-page">
+
+  <div class = "" id = "header">
+    <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
+
+    <nav id = "nav" class = "col-md-7">
+    <%= link_to "home", root_path, class: "link" %>
+    <%= link_to "projects", "/projects/exterior", class: "link" %>
+    <%= link_to "clients", "#", class: "link" %>
+    <%= link_to "contact", contact_path, class: "link" %>
+    </nav>
+  </div>
+
+  <div class = "row contact-content">
+
+    <div class = "contact-info col-md-offset-1 col-md-3">
+      <h2>rendArt stl, LLC</h2>
+      <h4>7014 Stanford Ave</h4>
+      <h4>St. Louis, MO 63130</h4>
+      <h4>p: 314.679.0033</h4>
+      <h4>e: bmartin@rendartstl.com</h4>
+    </div>
+
+    <div class = "col-md-4 contact-thanks">
+      <h4>
+        Thank you for contacting us. We look forward to speaking with you and will reply as soon as we can!
+      </h4>
+    </div>
+
+    <div id = "email" class = "contact-email col-md-4">
+      <blockquote><strong>TALK TO ME</strong></blockquote>
+      <%= form_tag :emails %>
+      <%=  email_field(:email, :from, placeholder: "Your email address", class: "form-control") %> 
+      <br />
+      <%=  text_area(:email, :body, rows: 12, placeholder: "Your message", class: "form-control") %>
+      <br />
+      <%= submit_tag "Send it", class: "btn form-control btn-primary" %>
+    </div>
+
+  </div>
+</div>
+

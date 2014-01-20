@@ -146,18 +146,148 @@ html, body{
   margin-left: -.5%;
 }
 
+.contact-content{
+  padding-top:15%;
+  color:white;
+}
+
+.contact-email{
+  padding-right: 5%;
+}
+
+.contact-thanks{
+  padding-right: 8%;
+  padding-top: 1%;
+}
+
+.contact-info{
+}
+
+
+  ////////////////////
+ ////// REAL BAD ////
+////////////////////
+
 .project-image{
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
-  //background-size: 175px auto;
-  //background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
 
   //box sizing
   height: 175px;
   width: 175px;
-  margin: 10px 0px 10px 0px;
+  margin-right: 10px;
 }
 
+
+.station4{
+  background: image-url("/assets/station4.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+
+}
+
+.cozzens3{
+  background: image-url("/assets/cozzens3.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.residential5{
+  background: image-url("/assets/residential5.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.residential3{
+  background: image-url("/assets/residential3.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.residential{
+  background: image-url("/assets/residential.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.ka{
+  background: image-url("/assets/ka.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.ka2{
+  background: image-url("/assets/ka2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.station11{
+  background: image-url("/assets/station11.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.station2{
+  background: image-url("/assets/station2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.station3{
+  background: image-url("/assets/station3.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.station12{
+  background: image-url("/assets/station12.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
+
+.wall{
+  background: image-url("/assets/wall.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:white;
+}
 
