@@ -33,7 +33,7 @@ $(function() {
   }
 
   $( $('.background')[0]).addClass('active');
-  
+
   //Set a drop shadow
   function setShadow(percent) {
     var min = 20, max = 250;
@@ -42,9 +42,9 @@ $(function() {
   }
 
   $(document).scroll(function() {
-      var max = window.innerHeight, y = window.scrollY;
+    var max = window.innerHeight, y = window.scrollY;
 
-        setShadow( y / max );
+    setShadow( y / max );
   });
 
   lastImageIndex = function() {
@@ -100,5 +100,12 @@ $(function() {
 
   $(".station4").click(function(){
   });
+
+
+
+
+  //$('.station4.fancybox').click( function() {
+      //$(".station4.fancybox").fancybox();
+  //});
 
 });

@@ -4,10 +4,10 @@
     <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
 
     <nav id = "nav" class = "col-md-7">
-      <%= link_to "home", root_path, class: "link" %>
-      <%= link_to "projects", "/projects/exterior", class: "link" %>
-      <%= link_to "clients", "#", class: "link" %>
-      <%= link_to "contact", contact_path, class: "link" %>
+    <%= link_to "home", root_path, class: "link" %>
+    <%= link_to "projects", "/projects/exterior", class: "link" %>
+    <%= link_to "clients", "#", class: "link" %>
+    <%= link_to "contact", contact_path, class: "link" %>
     </nav>
 
   </div>
@@ -24,12 +24,31 @@
   <div class = "projects">
 
     <div class = "row project-row">
-      <div class = "col-md-offset-1 col-md-2 project-image station4"></div>
-      <div class = "col-md-2 project-image cozzens3"></div>
-      <div class = "col-md-2 project-image residential5"></div>
-      <div class = "col-md-2 project-image residential3"></div>
-      <div class = "col-md-2 project-image residential"></div>
-      <div class = "col-md-2 project-image ka"></div>
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-offset-1 col-md-2 project-image station4 "></div>
+      </a>       
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-2 project-image cozzens3"></div>
+      </a>
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-2 project-image residential5"></div>
+      </a>
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-2 project-image residential3"></div>
+      </a>
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-2 project-image residential"></div>
+      </a>
+
+      <a href = "/assets/station4.jpg" id = "station4Link">
+        <div class = "col-md-2 project-image ka"></div>
+      </a>
+
     </div>
 
     <br />
@@ -46,4 +65,6 @@
     <br />
 
   </div>
-
+  <script> 
+    $("#station4Link").fancybox();
+  </script>
