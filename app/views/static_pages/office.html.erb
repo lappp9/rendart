@@ -1,13 +1,14 @@
+
 <div id = "content" class = "projects-page">
 
   <div class = "" id = "header">
-    <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
+    <a href = "/"><%= image_tag "logo.png", id: "logo", class: "col-md-4" %></a>
 
     <nav id = "nav" class = "col-md-7">
-      <%= link_to "home", root_path, class: "link" %>
-      <%= link_to "projects", "/projects/exterior", class: "link" %>
-      <%= link_to "clients", "#", class: "link" %>
-      <%= link_to "contact", contact_path, class: "link" %>
+    <%= link_to "home", root_path, class: "link" %>
+    <%= link_to "projects", "/projects/exterior", class: "link" %>
+    <%= link_to "clients", "#", class: "link" %>
+    <%= link_to "contact", contact_path, class: "link" %>
     </nav>
 
   </div>
@@ -24,26 +25,45 @@
   <div class = "projects">
 
     <div class = "row project-row">
-      <div class = "col-md-offset-1 col-md-2 project-image station4"></div>
-      <div class = "col-md-2 project-image cozzens3"></div>
-      <div class = "col-md-2 project-image residential5"></div>
-      <div class = "col-md-2 project-image residential3"></div>
-      <div class = "col-md-2 project-image residential"></div>
-      <div class = "col-md-2 project-image ka"></div>
+
+
+      <% @row1.each_with_index do |image, index| %>
+        <% if index == 0 %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-offset-1 col-md-2 project-image <%= image %>"></div>
+          </a>       
+        <% else %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-2 project-image <%= image %>"></div>
+          </a>
+        <% end %>
+
+        <script> 
+          $("#<%= image %>Link").fancybox();
+        </script>
+      <% end %>
+
+
     </div>
 
     <br />
 
-    <div class = "row project-row">
-      <div class = "col-md-offset-1 col-md-2 project-image ka2"></div>
-      <div class = "col-md-2 project-image station11"></div>
-      <div class = "col-md-2 project-image station2"></div>
-      <div class = "col-md-2 project-image station3"></div>
-      <div class = "col-md-2 project-image station12"></div>
-      <div class = "col-md-2 project-image wall"></div>
-    </div>
+      <% @row2.each_with_index do |image, index| %>
+        <% if index == 0 %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-offset-1 col-md-2 project-image <%= image %>"></div>
+          </a>       
+        <% else %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-2 project-image <%= image %>"></div>
+          </a>
+        <% end %>
+        <script> 
+          $("#<%= image %>Link").fancybox();
+        </script>
+      <% end %>
 
-    <br />
+
 
   </div>
 

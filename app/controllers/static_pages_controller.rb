@@ -6,83 +6,91 @@ class StaticPagesController < ApplicationController
   end
 
   def exterior
-    @exterior = [
-      "station4.jpg",
-      "cozzens3.jpg",
-      "residential5.jpg",
-      "residential3.jpg",
-      "residential.jpg",
-      "ka.jpg",
-      "ka2.jpg",
-      "station11.jpg",
-      "station2.jpg",
-      "station3.jpg",
-      "station12.jpg",
-      "wall.jpg"
+    @row1 = [
+      "station4",
+      "cozzens3",
+      "residential5",
+      "residential3",
+      "residential",
+      "ka"
+    ]
+    @row2 = [
+      "ka2",
+      "station11",
+      "station2",
+      "station3",
+      "station12",
+      "wall"
     ]
 
   end
 
   def office
-    @office = [
-      "cequel7.jpg",
-      "cequel8.jpg",
-      "cequel.jpg",
-      "cequel2.jpg",
-      "cequel3.jpg",
-      "cequel4.jpg",
-      "cequel5.jpg",
-      "cequel6.jpg",
-      "ameren.jpg",
-      "ameren2.jpg"
+    @row1 = [
+      "cequel7",
+      "cequel8",
+      "cequel",
+      "cequel2",
+      "cequel3",
+      "cequel4"
+    ]
+    @row2 = [
+      "cequel5",
+      "cequel6",
+      "ameren",
+      "ameren2"
     ]
   end
 
   def public_service
-    @public_service = [
-      "station5.jpg",
-      "station2.jpg",
-      "station4.jpg",
-      "station11.jpg",
-      "station3.jpg",
-      "station12.jpg",
-      "station8.jpg",
-      "station9.jpg"
+    @row1 = [
+      "station5",
+      "station2",
+      "station4",
+      "station11",
+      "station3",
+      "station12"
+    ]
+    @row2 = [
+      "station8",
+      "station9"
     ]
 
   end
 
   def residential
-    @residential = [
-      "cozzens3.jpg",
-      "cozzens.jpg",
-      "cozzens2.jpg",
-      "cozzens4.jpg",
-      "residential.jpg",
-      "wall.jpg",
-      "station8.jpg",
-      "station9.jpg",
-      "pure.jpg",
-      "assisted2.jpg",
-      "assisted.jpg"
+    @row1 = [
+      "cozzens3",
+      "cozzens",
+      "cozzens2",
+      "cozzens4",
+      "residential",
+      "wall"
+    ]
+    @row2 = [
+      "station8",
+      "station9",
+      "pure",
+      "assisted2",
+      "assisted"
     ]
 
   end
 
   def physical_model
-    @physical_model = [
-      "physical2.jpg"
+    @row1 = [
+      "physical2"
     ]
   end
 
   def sketch
-    @sketch = [
-      "sketch4.jpg",
-      "sketch.jpg",
-      "pure2.jpg",
-      "columbia.jpg",
-      "station6.jpg",
-      "sketch3.jpg"
+    @row1 = [
+      "sketch4",
+      "sketch",
+      "pure2",
+      "columbia",
+      "station6",
+      "sketch3"
     ]
   end
 end

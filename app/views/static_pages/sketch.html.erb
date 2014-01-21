@@ -1,7 +1,8 @@
+
 <div id = "content" class = "projects-page">
 
   <div class = "" id = "header">
-    <%= image_tag "logo.png", id: "logo", class: "col-md-4" %>
+    <a href = "/"><%= image_tag "logo.png", id: "logo", class: "col-md-4" %></a>
 
     <nav id = "nav" class = "col-md-7">
     <%= link_to "home", root_path, class: "link" %>
@@ -24,39 +25,26 @@
   <div class = "projects">
 
     <div class = "row project-row">
-      <div class = "col-md-offset-1 col-md-2 project-image station4" data-toggle="modal" data-target="#station4_modal"></div>
-      <div class = "col-md-2 project-image cozzens3"></div>
-      <div class = "col-md-2 project-image residential5"></div>
-      <div class = "col-md-2 project-image residential3"></div>
-      <div class = "col-md-2 project-image residential"></div>
-      <div class = "col-md-2 project-image ka"></div>
+
+
+      <% @row1.each_with_index do |image, index| %>
+        <% if index == 0 %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-offset-1 col-md-2 project-image <%= image %>"></div>
+          </a>       
+        <% else %>
+          <a href = "/assets/<%= image %>.jpg" id = "<%= image %>Link">
+            <div class = "col-md-2 project-image <%= image %>"></div>
+          </a>
+        <% end %>
+
+        <script> 
+          $("#<%= image %>Link").fancybox();
+        </script>
+      <% end %>
+
+
     </div>
-
-    <br />
-
-    <div class = "row project-row">
-      <div class = "col-md-offset-1 col-md-2 project-image ka2"></div>
-      <div class = "col-md-2 project-image station11"></div>
-      <div class = "col-md-2 project-image station2"></div>
-      <div class = "col-md-2 project-image station3"></div>
-      <div class = "col-md-2 project-image station12"></div>
-      <div class = "col-md-2 project-image wall"></div>
-    </div>
-
-    <br />
 
   </div>
 
-  <div class="modal fade" id = "station4_modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <img src = "/assets/station4" />
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->

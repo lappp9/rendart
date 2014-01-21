@@ -98,14 +98,4 @@ $(function() {
     }
   });
 
-  $(".station4").click(function(){
-  });
-
-
-
-
-  //$('.station4.fancybox').click( function() {
-      //$(".station4.fancybox").fancybox();
-  //});
-
 });

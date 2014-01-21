@@ -1,0 +1,24 @@
+  ///////////////////////////////////////
+ ////// Background Images///////////////
+///////////////////////////////////////
+
+@each $image in wall, station4, cozzens3, residential5, residential3, residential, 
+                ka, ka2, station11, station2, station3, station12,
+                cequel7, cequel8, cequel, cequel2, cequel3, cequel4, 
+                cequel5, cequel6, ameren, ameren2, station5, station2, 
+                station4, station11, station3, station12, station8, station9,
+                cozzens4, cozzens2, cozzens3, cozzens, residential, wall, 
+                station8, station9, pure, assisted,
+                physical2, assisted2, pure2,
+                sketch4, sketch, columbia, station6, sketch3
+                {
+  .#{$image}{
+    background: image-url("/assets/#{$image}.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:white;
+  }
+}
+
