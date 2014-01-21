@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 gem 'bootstrap-sass-rails'
+gem 'fancybox-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
