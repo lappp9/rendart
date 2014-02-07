@@ -1,7 +1,9 @@
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-# Setup mail stuff
+# Initialize the Rails application.
+RendArt::Application.initialize!
+
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => '587',
@@ -11,6 +13,3 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
-
-# Initialize the Rails application.
-RendArt::Application.initialize!
