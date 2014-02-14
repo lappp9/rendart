@@ -6,6 +6,7 @@ gem 'bootstrap-sass-rails'
 gem 'fancybox-rails'
 gem 'mandrill-rails'
 gem 'sendgrid'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 
 group :development, :test do
