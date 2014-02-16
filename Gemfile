@@ -8,7 +8,6 @@ gem 'mandrill-rails'
 gem 'sendgrid'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
-
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
