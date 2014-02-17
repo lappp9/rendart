@@ -103,10 +103,10 @@ html, body{
 }
 
 .arrow{
-  top:50%;
+  top:50% !important;
   position: absolute;
   color:white;
-  font-size: 30px;
+  font-size: 40px;
   opacity: .50;
 }
 .arrow.left{
@@ -173,5 +173,16 @@ html, body{
   margin-right: 10px;
 }
 
+
+span#left{
+  position:absolute;
+  top:50%;
+}
+
+span#right {
+position: absolute !important;
+top: 50% !important;
+right: 0 !important;
+}
 
 
