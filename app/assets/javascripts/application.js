@@ -15,3 +15,4 @@
 //= require fancybox
 //= require turbolinks
 //= require_tree .
+//= require twitter/bootstrap

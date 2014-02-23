@@ -1,15 +1,6 @@
 <div id = "content" class = "projects-page">
 
-  <div class = "" id = "header">
-    <a href = "/"><%= image_tag "logo.png", id: "logo", class: "col-md-4" %></a>
-
-    <nav id = "nav" class = "col-md-7">
-    <%= link_to "home", root_path, class: "link" %>
-    <%= link_to "projects", "/projects/exterior", class: "link" %>
-    <%= link_to "clients", "#", class: "link" %>
-    <%= link_to "contact", contact_path, class: "link" %>
-    </nav>
-  </div>
+  <%= render "static_pages/partials/header" %>
 
   <div class = "row contact-content">
 

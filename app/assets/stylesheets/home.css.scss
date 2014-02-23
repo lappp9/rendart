@@ -1,0 +1,46 @@
+
+
+span#left{
+  position:absolute;
+  top:50%;
+}
+
+span#right {
+  position: absolute !important;
+  top: 50% !important;
+  right: 0 !important;
+}
+
+#navigation{
+  position:absolute;
+  right:0;
+  z-index:101;
+}
+
+button.navbar-toggle {
+  background-color: gray !important;
+  opacity: .7;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white !important;
+}
+.navbar-default{
+  background-color: transparent !important;
+  border:none !important;
+}
+
+#navbar-collapse {
+  background-color: gray;
+  color: white !important;
+}
+.dropdown{
+  color:white;
+}
+
+#navigation > nav.navbar.navbar-default.visible-xs > div.navbar-header {
+  padding-bottom: 50px;
+}

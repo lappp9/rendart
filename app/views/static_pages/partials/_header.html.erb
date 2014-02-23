@@ -1,0 +1,52 @@
+<div class = "row" id = "header">
+
+  <a href = "/"><%= image_tag "logo.png", id: "logo", class: "col-md-5" %></a>
+
+  <div id = "navigation" class = "col-md-12">
+
+    <nav class="navbar navbar-default visible-xs row" role="navigation">
+
+      <div class="collapse navbar-collapse col-xs-5" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown ">
+          <a href="/" >home</a>
+          </li>
+          <li class="dropdown ">
+          <a href="/projects/exterior" >project</a>
+          </li>
+          <li class="dropdown ">
+          <a href="/admin/login" >clients</a>
+          </li>
+          <li class="dropdown ">
+          <a href="/contact" >contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-header col-xs-5 col-xs-offset-2">
+
+        <div class="col-xs-3 orange-four-bg">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+      </div>
+
+    </nav>
+
+    <nav id = "nav" class = "hidden-xs">
+      <%= link_to "home", root_path, class: "link" %>
+      <%= link_to "projects", "/projects/exterior", class: "link" %>
+      <%= link_to "clients", "/admin/login", class: "link" %>
+      <%= link_to "contact", contact_path, class: "link" %>
+    </nav>
+
+  </div>
+
+</div>
+
+
