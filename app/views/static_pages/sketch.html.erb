@@ -2,12 +2,12 @@
 <div id = "content" class = "projects-page">
 
   <%= render "static_pages/partials/header" %>
+
   <%= render "static_pages/partials/project_nav" %>
 
   <div class = "projects">
 
     <div class = "row project-row">
-
 
       <% @row1.each_with_index do |image, index| %>
         <% if index == 0 %>
@@ -24,7 +24,6 @@
           $("#<%= image %>Link").fancybox();
         </script>
       <% end %>
-
 
     </div>
 

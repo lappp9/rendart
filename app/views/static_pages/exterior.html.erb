@@ -30,6 +30,7 @@
 
     <br />
 
+    <div class = "row project-row">
       <% @row2.each_with_index do |image, index| %>
         <% if index == 0 %>
           <a href = "http://cdn.rendartstl.com/images/<%= image %>.jpg" id = "<%= image %>Link">
@@ -44,6 +45,7 @@
           $("#<%= image %>Link").fancybox();
         </script>
       <% end %>
+    </div>
 
 
 
