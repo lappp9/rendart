@@ -12,19 +12,19 @@ $(function() {
   }
 
   var images = [
-    "/assets/cequel.jpg",
-    "/assets/ka.jpg",
-    "/assets/physical.JPG", 
-    "/assets/station4.jpg", 
-    "/assets/sketch4.JPG", 
-    "/assets/residential6.jpg", 
-    "/assets/cozzens3.jpg", 
-    "/assets/residential.jpg", 
-    "/assets/residential5.jpg", 
-    "/assets/ameren.jpg", 
-    "/assets/ameren2.jpg", 
-    "/assets/cequel3.jpg",
-    "/assets/cequel7.jpg"
+    "http://cdn.rendartstl.com/images/cequel.jpg",
+    "http://cdn.rendartstl.com/images/ka.jpg",
+    "http://cdn.rendartstl.com/images/physical.JPG", 
+    "http://cdn.rendartstl.com/images/station4.jpg", 
+    "http://cdn.rendartstl.com/images/sketch4.JPG", 
+    "http://cdn.rendartstl.com/images/residential6.jpg", 
+    "http://cdn.rendartstl.com/images/cozzens3.jpg", 
+    "http://cdn.rendartstl.com/images/residential.jpg", 
+    "http://cdn.rendartstl.com/images/residential5.jpg", 
+    "http://cdn.rendartstl.com/images/ameren.jpg", 
+    "http://cdn.rendartstl.com/images/ameren2.jpg", 
+    "http://cdn.rendartstl.com/images/cequel3.jpg",
+    "http://cdn.rendartstl.com/images/cequel7.jpg"
   ];
 
 
